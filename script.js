@@ -1,7 +1,5 @@
-function changeColor(squareId){
-    var square = document.getElementById(squareId)
-    var randomColor = getRandomColor()
-    
+function changeColor(element){
+    element.style.backgroundColor = getRandomColor()    
 }
 function getRandomColor(){
     var letters = '0123456789ABCDEF'
@@ -11,3 +9,11 @@ function getRandomColor(){
     }
     return color
 }
+function flashColors(){
+    var flashes = document.querySelectorAll('.flash')
+    flashes.forEach(function(flash){
+        var randomColor = getRandomColor()
+        flash.style.backgroundColor = randomColor
+    })
+}
+setInterval(flashColors, 100)

@@ -9,15 +9,35 @@ body{
 }
 #container{
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .box{
     width: 50px;
     height: 50px;
     background-color: green;
     margin-right: 10px;
+    display: flex;
+    align-items: center;
 }
-.buttons{
+#buttons{
     margin-top: 10px;
     padding: 10px;
     font-size: 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: black;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: repeat(3, 50px);
+    gap: 5px;
+}
+.flash{
+    width: 50px;
+    height: 50px;
+    background-color: black;
 }
